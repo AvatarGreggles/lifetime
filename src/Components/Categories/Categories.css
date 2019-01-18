@@ -1,0 +1,33 @@
+.Categories{
+  background-color: #292727;
+  width: 20%;
+  max-width: 250px;
+  padding: 10px;
+}
+
+.Category{
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.Category-All{
+  background-color: purple;
+}
+
+.Category-Fitness{
+  background-color: blue;
+}
+
+.Category-Creativity{
+  background-color: green;
+}
+
+.Category-Gaming{
+  background-color: red;
+}
+
+.Category-Work{
+  background-color: brown;
+}

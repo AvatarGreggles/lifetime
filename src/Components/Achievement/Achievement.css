@@ -1,0 +1,31 @@
+.Achievement{
+  background-color:#353333;
+  margin-bottom: 10px;
+  border-radius:10px;
+  display: flex;
+}
+
+.Achievement-Category{
+  border-radius:10px 0px 0px 10px;
+  width: 40px;
+}
+
+.Achievement-Category-Fitness{
+  background: blue;
+}
+
+.Achievement-Category-Work{
+  background: brown;
+}
+
+.Achievement-Category-Gaming{
+  background: red;
+}
+
+.Achievement-Category-Creativity{
+  background: green;
+}
+
+.Achievement-Information{
+  padding: 5px 0px 10px 10px;
+}
