@@ -10,7 +10,7 @@ class AchievementList extends React.Component{
       <div className="Achievement-List">
 
       {this.props.availableAchievements.map(achievement =>{
-        return <Achievement key={achievement.id} achievement={achievement}/>
+        return <Achievement key={achievement.id} achievement={achievement} experienceHandler={this.props.experienceHandler}/>
       })
     }
       </div>

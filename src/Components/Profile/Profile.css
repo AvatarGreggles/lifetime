@@ -1,5 +1,50 @@
 .Profile{
   margin-bottom: 10px;
-  padding: 20px;
+  padding: 10px;
   background-color: #292727;
+  width: 50%;
+  max-width: 500px;
+  display: flex;
+}
+
+.Profile-Avatar{
+  background-color: #353333;
+  height: 75px;
+  width: 75px;
+}
+
+.Profile-Avatar img{
+  height: 75px;
+  width: 75px;
+}
+
+.Profile-Info{
+  margin-left: 10px;
+  font-weight: bold;
+}
+
+.Profile-Info-Level{
+  font-weight: normal;
+}
+
+.Profile-Info-Exp{
+  font-weight: normal;
+  display: flex;
+}
+
+.Experience-Bar{
+  width: 200px;
+  padding: 2px;
+  border: 1px solid white;
+}
+
+.Experience-Bar div{
+  background-color: blue;
+  font-size: 12px;
+  text-align: center;
+
+}
+
+.Profile-Info-Completed{
+  font-weight: normal;
 }

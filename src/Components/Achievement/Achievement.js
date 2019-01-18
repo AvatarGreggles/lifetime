@@ -3,6 +3,15 @@ import './Achievement.css';
 
 
 class Achievement extends React.Component{
+constructor(props){
+  super(props);
+
+  this.markAsComplete = this.markAsComplete.bind(this);
+}
+  markAsComplete(){
+    this.props.experienceHandler(this.props.achievement.expValue);
+
+  }
 
   render(){
     let categoryClass = 'Achievement-Category';
@@ -18,7 +27,7 @@ class Achievement extends React.Component{
 
     return (
       <div className="Achievement">
-        <span className={categoryClass}></span>
+        <span className={categoryClass} onClick={this.markAsComplete}></span>
         <div className="Achievement-Information">
           <h3>{this.props.achievement.title}</h3>
           <p>{this.props.achievement.description}</p>
