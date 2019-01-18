@@ -2,22 +2,32 @@ import React from 'react';
 import './Categories.css';
 
 class Categories extends React.Component{
+  constructor(props){
+    super(props);
+
+this.categorizeAchievements = this.categorizeAchievements.bind(this);
+  }
+
+  categorizeAchievements(event){
+    this.props.categorize(event.target.innerHTML);
+  }
+
   render(){
     return (
       <div className="Categories">
-      <div className=" Category Category-All">
+      <div onClick={this.categorizeAchievements} className=" Category Category-All">
         All
       </div>
-        <div className=" Category Category-Fitness">
+        <div onClick={this.categorizeAchievements} className=" Category Category-Fitness">
           Fitness
         </div>
-        <div className=" Category Category-Creativity">
+        <div onClick={this.categorizeAchievements} className=" Category Category-Creativity">
           Creativity
         </div>
-        <div className=" Category Category-Gaming">
+        <div onClick={this.categorizeAchievements} className=" Category Category-Gaming">
           Gaming
         </div>
-        <div className=" Category Category-Work">
+        <div onClick={this.categorizeAchievements} className=" Category Category-Work">
           Work
         </div>
       </div>

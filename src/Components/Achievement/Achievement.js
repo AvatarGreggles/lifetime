@@ -12,7 +12,7 @@ class Achievement extends React.Component{
       categoryClass += ' Achievement-Category-Fitness';
     }else if(this.props.achievement.category === 'Gaming'){
       categoryClass += ' Achievement-Category-Gaming';
-    }else if(this.props.achievement.category === 'Sports'){
+    }else if(this.props.achievement.category === 'Creativity'){
       categoryClass += ' Achievement-Category-Creativity';
     }
 
