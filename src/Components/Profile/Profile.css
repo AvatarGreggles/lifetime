@@ -45,6 +45,12 @@
 
 }
 
+.Experience-Bar div span{
+position: relative;
+left: 75px;
+
+}
+
 .Profile-Info-Completed{
   font-weight: normal;
 }

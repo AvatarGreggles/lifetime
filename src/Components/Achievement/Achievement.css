@@ -29,3 +29,9 @@
 .Achievement-Information{
   padding: 5px 0px 10px 10px;
 }
+
+.Achievement-Actions{
+  flex-grow: 1;
+    text-align: right;
+    padding: 20px;
+}

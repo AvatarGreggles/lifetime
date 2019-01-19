@@ -92,6 +92,13 @@ const completeAchievementList =
     description: 'Default',
     category: 'Creativity',
     expValue: fourStar
+  },
+  {
+    id: 10,
+    title: 'Default',
+    description: 'Default',
+    category: 'Fitness',
+    expValue: oneStar
   }
 ]
 

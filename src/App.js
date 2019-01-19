@@ -14,7 +14,7 @@ class App extends Component {
       achievements: completeAchievementList,
       username: 'MagicTricksKill',
       level: 1,
-      experience: 20,
+      experience: 0,
       completedAchievements: 0,
       experienceCap: 100,
 
@@ -48,7 +48,7 @@ levelUp(remainingExp){
 gainExperience(experience, id){
   const newExperienceTotal = this.state.experience + experience;
 
-  this.setState({experience: newExperienceTotal});
+  this.setState({experience: newExperienceTotal, completedAchievements: this.state.completedAchievements + 1});
 
   if(newExperienceTotal >= (this.state.experienceCap)){
     let remainingExp = Math.floor(newExperienceTotal - this.state.experienceCap);

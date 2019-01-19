@@ -32,6 +32,11 @@ constructor(props){
           <h3>{this.props.achievement.title}</h3>
           <p>{this.props.achievement.description}</p>
         </div>
+        <div className="Achievement-Actions">
+          <div className="Achievement-Actions-MarkComplete">
+            ►
+          </div>
+        </div>
       </div>
 
     )
