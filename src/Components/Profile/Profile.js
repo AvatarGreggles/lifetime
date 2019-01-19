@@ -3,7 +3,8 @@ import './Profile.css';
 
 class Profile extends React.Component{
   render(){
-  let expProgress = this.props.experience + '%';
+  let expProgress = (this.props.experience/this.props.level) + '%';
+  const limit = 100 + '%';
 
     return (
       <div className="Profile">
@@ -21,7 +22,7 @@ class Profile extends React.Component{
               Exp:
               <div className="Experience-Bar">
 
-                <div style={{width: expProgress}}>{this.props.experience}%</div>
+                <div style={{width: expProgress, maxWidth: limit}}>{this.props.experience}xp</div>
               </div>
             </div>
             <div className="Profile-Info-Completed">
