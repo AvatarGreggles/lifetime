@@ -3,7 +3,7 @@ import './Profile.css';
 
 class Profile extends React.Component{
   render(){
-  let expProgress = (this.props.experience/this.props.level) + '%';
+  let expProgress = (this.props.experience/this.props.experienceCap) * 100 + '%';
   const limit = 100 + '%';
 
     return (

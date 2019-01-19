@@ -16,7 +16,8 @@ class App extends Component {
       level: 1,
       experience: 20,
       completedAchievements: 0,
-      experienceCap: 100
+      experienceCap: 100,
+
     }
 
     this.categorize = this.categorize.bind(this);
@@ -26,7 +27,6 @@ class App extends Component {
 
 categorize(category){
     const categorizedAchievements = [];
-    console.log(category);
 
     if(category !== 'All'){
     completeAchievementList.map(achievement =>{
@@ -40,24 +40,26 @@ categorize(category){
   }
 }
 
-levelUp(){
-  this.setState({level: this.state.level + 1, experience: 0, experienceCap: this.state.experienceCap * 1.5});
+levelUp(remainingExp){
+  this.setState({level: this.state.level + 1, experience: 0 + remainingExp, experienceCap: this.state.experienceCap * 1.15});
 
 }
 
 gainExperience(experience, id){
   const newExperienceTotal = this.state.experience + experience;
-      console.log(newExperienceTotal);
+
   this.setState({experience: newExperienceTotal});
+
   if(newExperienceTotal >= (this.state.experienceCap)){
-    this.levelUp();
+    let remainingExp = Math.floor(newExperienceTotal - this.state.experienceCap);
+    this.levelUp(remainingExp);
   }
 }
 
   render() {
     return (
       <div className="App">
-      <Profile username={this.state.username} level={this.state.level} experience={this.state.experience} completedAchievements={this.state.completedAchievements}/>
+      <Profile username={this.state.username} level={this.state.level} experience={this.state.experience} completedAchievements={this.state.completedAchievements} expMultiplier={this.state.expMultiplier} experienceCap={this.state.experienceCap}/>
         <div className="App-Body">
           <Categories categorize={this.categorize}/>
           <AchievementList availableAchievements={this.state.achievements} experienceHandler={this.gainExperience}/>
