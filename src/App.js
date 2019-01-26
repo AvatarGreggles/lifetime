@@ -45,7 +45,7 @@ levelUp(remainingExp){
 
 }
 
-gainExperience(experience, id){
+gainExperience(experience){
   const newExperienceTotal = this.state.experience + experience;
 
   this.setState({experience: newExperienceTotal, completedAchievements: this.state.completedAchievements + 1});
